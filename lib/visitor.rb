@@ -5,7 +5,7 @@ class Visitor
         def initialize(info)
           @name = info[:name]
           @height = info[:height]
-          @spending_money = info[:spending_money].to_i# Convert to integer #need to make this array to keep track of changes
+          @spending_money = info[:spending_money].to_i# Convert to integer #need to make this array to keep track of changes?
           @preferences = []
         end
       
