@@ -4,9 +4,9 @@ require 'spec_helper'
 
 RSpec.describe Visitor do
     before(:each) do
-        @visitor1 = Visitor.new(name: 'Bruce', height: 54, spending_money: '$10')
-        @visitor2 = Visitor.new(name: 'Tucker', height: 36, spending_money: '$5')
-        @visitor3 = Visitor.new(name: 'Penny', height: 64, spending_money: '$15')
+        @visitor1 = Visitor.new({name: 'Bruce', height: 54, spending_money: '$10'})
+        @visitor2 = Visitor.new({name: 'Tucker', height: 36, spending_money: '$5'})
+        @visitor3 = Visitor.new({name: 'Penny', height: 64, spending_money: '$15'})
 
     end
 
@@ -14,7 +14,7 @@ RSpec.describe Visitor do
         expect(@visitor1).to be_an_instance_of(Visitor)
         expect(@visitor1.name).to eq("Bruce")
         expect(@visitor1.height).to eq(54)
-        expect(@visitor1.spending_money).to eq("$10")
+        expect(@visitor1.spending_money).to eq(10)
      end
 
      
