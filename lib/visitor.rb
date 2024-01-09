@@ -5,13 +5,16 @@ class Visitor
     def initialize(info)
         @name = info[:name]
         @height = info[:height]
-        @spending_money = info[spending_money]
+        @spending_money = info[:spending_money]
         @preferences = []
     end
 
-        def add_preference(info)
-            @preferences << info
-        end
+    def add_preference(preference)
+        @preferences << preference
+    end
 
-        def tall_enough?
-            @height == 
+    def tall_enough?(needed_height)
+        @height >= needed_height
+    end
+end
+
